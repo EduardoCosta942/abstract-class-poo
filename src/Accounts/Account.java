@@ -1,3 +1,5 @@
+package Accounts;
+
 public abstract class Account {
     // Declare Attributes
     protected int number;
@@ -33,7 +35,7 @@ public abstract class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
+        return "Accounts.Account{" +
                 "number=" + number +
                 ", balance=" + balance +
                 '}';

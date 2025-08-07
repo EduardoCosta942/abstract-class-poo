@@ -1,3 +1,5 @@
+package Accounts;
+
 public class ContaCorrente extends Account{
     // Attributes:
     private final double limit;
@@ -30,7 +32,7 @@ public class ContaCorrente extends Account{
 
     @Override
     public String toString() {
-        return super.toString() + "ContaCorrente{" +
+        return super.toString() + "Accounts.ContaCorrente{" +
                 "limit=" + limit +
                 '}';
     }

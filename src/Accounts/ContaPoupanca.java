@@ -1,3 +1,5 @@
+package Accounts;
+
 public class ContaPoupanca extends  Account{
     // Attributes:
     private int numAniv;
@@ -26,7 +28,7 @@ public class ContaPoupanca extends  Account{
     // Methods, toString()
     @Override
     public String toString(){
-        return super.toString() + "ContaPoupanca={" +
+        return super.toString() + "Accounts.ContaPoupanca={" +
                 "numAniv=" +
                 +numAniv
                 + "}";
