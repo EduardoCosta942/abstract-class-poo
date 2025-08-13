@@ -40,6 +40,5 @@ public abstract class User {
     }
 
     // Declare abstract methods
-    public abstract boolean login();
-    public abstract boolean updateProfile();
+    public abstract boolean login(String authenticator);
 }
