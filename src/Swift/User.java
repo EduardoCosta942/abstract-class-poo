@@ -39,7 +39,7 @@ public abstract class User {
         return cpf.length() == 12;
     }
 
-    // Implement methods
+    // Declare abstract methods
     public abstract boolean login();
     public abstract boolean updateProfile();
 }
