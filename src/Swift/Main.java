@@ -18,8 +18,10 @@ public class Main {
         boolean isAuthenticated;
 
 
+        // Run program while user does not choose to leave
         choice = 0;
         do {
+            // Get user's choice
             do {
                 got_caught = false;
                 System.out.println(menu());
@@ -32,7 +34,9 @@ public class Main {
                 }
             } while (got_caught);
 
+            // Make actions according to the choice
             if (choice == 1){ // Employee
+                //
                 do {
                     got_caught = false;
                     System.out.println(insideMenu());
@@ -79,7 +83,7 @@ public class Main {
                     }
                     if (!isAuthenticated) System.out.println("Invalid CPF.");
 
-                } else { // SIGN-UP SELLER
+                } else { // Sign up employe
                     System.out.print("Name: ");
                     String name = scanner.next();
                     scanner.next();
@@ -95,6 +99,7 @@ public class Main {
 
             } else if (choice == 2){ // Costumer
                 do {
+                    // Solve inside option
                     got_caught = false;
                     System.out.println(insideMenu());
                     returned = validateChoice(1,2, scanner);
@@ -106,7 +111,8 @@ public class Main {
                     }
                 } while (got_caught);
 
-                if (choice == 1){ // LOGIN COSTUMER
+                // Do actions according to option
+                if (choice == 1){ // Costumer's Login
                     System.out.print("Type your password: ");
                     authenticator = scanner.next();
                     isAuthenticated = false;
@@ -115,7 +121,7 @@ public class Main {
                             isAuthenticated = true;
                             System.out.println("Login successful. Welcome " + costumers[x].getName());
 
-                            // ADIÇÃO: opções após login do Costumer
+                            // Costumer's action
                             boolean costumerMenu = true;
                             while (costumerMenu) {
                                 System.out.println("""
@@ -138,7 +144,6 @@ public class Main {
                                     costumerMenu = false;
                                 }
                             }
-                            break;
                         }
                     }
                     if (!isAuthenticated) System.out.println("Invalid password.");
@@ -179,7 +184,7 @@ public class Main {
             if (choice < min || choice > max ) throw new IllegalArgumentException("Choose an option of the list");
             return String.valueOf(choice);
         } catch (InputMismatchException ime){
-            scanner.next(); // limpa buffer
+            scanner.next(); // Clean buffer
             return "The input type must be a number";
         } catch (IllegalArgumentException iae){
             return iae.getMessage();

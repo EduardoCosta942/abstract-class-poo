@@ -1,3 +1,4 @@
+/*
 public class Main{
     public static void main(String[] args) {
         // Declare variables
@@ -30,3 +31,4 @@ public class Main{
         System.out.println(vegetable);
     }
 }
+*/
