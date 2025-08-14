@@ -9,15 +9,18 @@ public class Costumer extends User{
     private String password;
 
     // Builder Methods
-    public Costumer(String name, int age, String cpf, String[][] history, double spentMoney){
+    public Costumer(String name, int age, String cpf, String[][] history, double spentMoney, String password){
         super(name, age, cpf);
+        this.password = password;
         this.history = history;
         this.spentMoney = spentMoney;
         history = new String[100][100];
+        this.password = password;
     }
 
-    public Costumer(String name, int age, String cpf){
+    public Costumer(String name, int age, String cpf, String password){
         super(name, age, cpf);
+        this.password = password;
     }
 
     // No setter available
@@ -27,6 +30,9 @@ public class Costumer extends User{
     }
     public double getSpentMoney() {
         return spentMoney;
+    }
+    public String getPassword(){
+        return password;
     }
 
     // Implement methods:
